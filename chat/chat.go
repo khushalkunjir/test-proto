@@ -15,8 +15,8 @@ func (s *Server) SayHello(ctx context.Context, message *Message) (*Message, erro
 }
 
 func (s *Server) SendParameters(ctx context.Context, instruction Instruction) (*Instruction, error) {
-	log.Printf("Received Instruction Ip address from client: %s", instruction.ipAddress)
-	log.Printf("Received Instruction port from client: %s", instruction.port)
-	log.Printf("Received Instruction name from client: %s", instruction.name)
+	log.Printf("Received Instruction Ip address from client: %s", instruction.IpAddress)
+	log.Printf("Received Instruction port from client: %s", instruction.Port)
+	log.Printf("Received Instruction name from client: %s", instruction.Name)
 	return &Instruction{IpAddress: "10.10.10.1", Port: "9000", Name: "Node1"}, nil
 }
